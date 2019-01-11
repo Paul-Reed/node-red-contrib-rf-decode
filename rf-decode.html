@@ -1,0 +1,47 @@
+<script type="text/javascript">
+    RED.nodes.registerType('rf-decode',{
+        category: 'function',
+        color: '#E6E0F8',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "im.png",
+        label: function() {
+            return this.name||"rf-decode";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="rf-decode">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="rf-decode">
+<p>rfm69pi-decoder decodes binary packages, specifically from RFM69Pi or RFM2Pi boards, as used in the openenergymonitor project.</p> 
+<h3>Inputs</h3>
+    <dl class="message-properties">
+        <dt>payload</dt>
+        <dd>Binary packet data as produced by a RFM69Pi or RFM2Pi board.</dd>
+    </dl>
+        <h3>Outputs</h3>
+    <dl class="message-properties">
+        <dt>payload</dt>
+        <dd>An array of decoded packet data, plus context information. </dd>
+    </dl>
+    <h3>Details</h3>
+    <p>The context information payloads added to the flow, and their typical content format are;</p>
+    <ul>
+  <li>ack: "OK" (acknowledgement of msg integrity</li>
+  <li>node: 23 (The originating node ID)</li>
+  <li>rssi: -61 (The RSSI of the sending device)</li>
+  <li>time: 1547147593051 (Epoch timestamp of time received)</li>
+    </ul>
+<p> 
+ A typical output from a RFM69Pi or RFM2Pi board takes the format - OK 23 22 1 0 0 0 0 237 94 188 4 (-61)
+</p>
+</script>

@@ -1,0 +1,31 @@
+{
+  "name": "node-red-contrib-rf-decode",
+  "version": "0.0.2",
+  "description": "Binary packet decoder specifically for RFM69Pi boards.",
+  "main": "rf-decode.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Paul-Reed/node-red-contrib-rf-decode.git"
+  },
+  "keywords": [
+    "node-red",
+    "emoncms",
+    "openenergymonitor",
+    "rfm2pi",
+    "rfm69pi"
+  ],
+   "node-red" : {
+        "nodes": {
+            "rfm69pi-decoder": "rf-decode.js"
+        }
+    },
+  "author": "Paul Reed",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Paul-Reed/node-red-contrib-rf-decode/issues"
+  },
+  "homepage": "https://github.com/Paul-Reed/node-red-contrib-rf-decode#readme"
+}
