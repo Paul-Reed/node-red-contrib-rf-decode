@@ -1,6 +1,6 @@
 {
   "name": "node-red-contrib-rf-decode",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Binary packet decoder specifically for RFM69Pi boards.",
   "main": "rf-decode.js",
   "scripts": {
@@ -25,7 +25,7 @@
   "author": "Paul Reed",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/Paul-Reed/node-red-contrib-rf-decode/issues"
+    "email": "pauldreed@gmail.com"
   },
   "homepage": "https://github.com/Paul-Reed/node-red-contrib-rf-decode#readme"
 }
